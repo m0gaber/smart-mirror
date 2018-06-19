@@ -1,3 +1,4 @@
+############################# readmail.py ##################################
 import imaplib
 import pprint
 import email
@@ -46,8 +47,8 @@ From=email_message['From']
 Subject= email_message['Subject']
 Body=body.decode('utf-8')
 
-         
 
- 
+
+
 msrvr.close()
 msrvr.logout()
