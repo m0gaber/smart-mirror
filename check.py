@@ -1,3 +1,4 @@
+##################### check.py ###########################
 from Tkinter import *
 import tkMessageBox
 
@@ -12,7 +13,7 @@ def check_btn1():
          return 1
    else :
       return 0
-   
+
 def check_btn2():
    if var2.get() == 1:
          return 2
@@ -27,9 +28,9 @@ def check_btn3():
 
 def check_btn4():
    if var4.get() == 1:
-         return 4      
+         return 4
    else :
-      return 0  
+      return 0
 
 master.configure(background='black')
 Label(master, text="Your Choices:",bg="black",fg="white",font=('Helvetica',20)).grid(row=0, sticky=W)
@@ -48,7 +49,7 @@ Checkbutton(master, text="Clock", variable=var2,command=check_btn2,height=3,widt
 var3 = IntVar()
 var3.set(0)
 Checkbutton(master, text="Weather", variable=var3,command=check_btn3,height=3,width=10,font=('Helvetica',30),bg="black",fg="white",selectcolor="black").grid(row=2,column =2, sticky=W)
-   
+
 
 var4 = IntVar()
 var4.set(0)
