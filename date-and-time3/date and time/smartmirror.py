@@ -29,9 +29,9 @@ import Tkinter
 
 import glob
 import sys
-sys.path.append('C:\Users\M_K\Desktop\Facial-recognition-master\Facial_recognition_master')
+sys.path.append('C:\Users\M_K\Documents\GitHub\smart-mirror\Facial-recognition-master\Facial_recognition_master')
 
-#import mainRec2
+import mainRec2
 
 
 
@@ -356,7 +356,7 @@ class Email(Frame):
 class welcome(Frame):
     def __init__(self, parent, event_name="Event 1"):
         Frame.__init__(self, parent, bg='black')
-        self.e ='Welcome , '#+mainRec2.text
+        self.e ='Welcome , '+mainRec2.text
 
 
         self.txt = Label(self, text=self.e, font=('Helvetica',20), fg="white", bg="black")
@@ -409,11 +409,11 @@ class FullscreenWindow:
             self.text = Email(self.topFrame)
             self.text.pack(side=LEFT, anchor=W, padx=50, pady=20)
 
-        
+
         #Qoutes
         self.text = qoute(self.topFrame)
         self.text.place(x=30,y=280)
-        
+
 
 
         #Welcome
@@ -428,9 +428,9 @@ class FullscreenWindow:
         if clock == 2:
             self.clock = Clock(self.topFrame)
             self.clock.pack(side=TOP, anchor=E, padx=10, pady=10)
-        
 
-        
+
+
 
 
         # weather
@@ -438,18 +438,18 @@ class FullscreenWindow:
         if weather == 3:
             self.weather = Weather(self.topFrame)
             self.weather.pack(side=TOP, anchor=E, padx=30, pady=30)
-        
 
-        
+
+
 
         # news
         news=check.check_btn4()
         if news == 4:
             self.news = News(self.bottomFrame)
             self.news.pack(side=BOTTOM, anchor=S, padx=10, pady=50)
-        
 
-        
+
+
 
 
     def toggle_fullscreen(self, event=None):
@@ -469,5 +469,5 @@ class FullscreenWindow:
 if __name__ == '__main__':
    # while True :
         w = FullscreenWindow()
-        
+
         w.tk.mainloop()
